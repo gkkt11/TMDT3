@@ -4,25 +4,25 @@ const img3 = require("../images/slider/slide_3.png").default
 
 const heroSliderData = [
     {
-        title: "Polo nữ Pima cao cấp",
-        description: "Nhắc đến sự đẳng cấp là không thể không nhắc đến dòng vải pima. Nó tạo nên chất lượng tốt nhất cho bất kỳ sản phẩm thời trang nào. Sợi vải pima dài và dày hơn sợi cotton thông thường gấp đôi nhờ công nghệ dệt tân tiến. Điều đó làm cho kết cấu áo polo chắc chắn, bền chặt, hạn chế tối đa xù lông, mềm mượt, bền màu, vô cùng đảm bảo sức khoẻ người dùng",
+        title: "CONVERSE CHUCK ALL-STAR",
+        description: "Inspired by the iconic looks of '90s girl bands, these platform Chucks are sure to turn heads. Premium leather can be as refined or edgy as you'd like, while a double-stacked sole takes you higher.",
         img: img1,
-        color: "blue",
+        color: "black",
         path: "/catalog/ao-thun-dinosaur-01"
     },
     {
-        title: "Polo Nữ Dáng Suông Modal",
-        description: "Polo nữ dáng suông Modal sử dụng công nghệ vải cao cấp thân thiện với môi trường sản xuất độc quyền chống co rút vải, áo polo nữ vải modal là sản phẩm thích hợp cho các bạn có môi trường làm việc năng động như hiện nay",
+        title: "NIKE AIR MORE UPTEMPO",
+        description: "The Nike Air Force 1 Shadow puts a playful twist on a classic b-ball design.Using a layered approach, doubling the branding and exaggerating the midsole, it highlights AF-1 DNA with a bold, new look",
         img: img2,
         path: "/catalog/ao-thun-dinosaur-02",
-        color: "pink"
+        color: "orange"
     },
     {
-        title: "Polo Nữ Coolmax Lacoste",
-        description: "Mẫu áo polo nữ được làm bằng chất liệu coolmax đem lại cảm giác mát lạnh khi mặc. Thiết kế mẫu áo polo coolmax này có kiểu dáng cực kỳ thoải mái. Tạo sự gọn gàng hứa hẹn sẽ là mẫu áo polo vô cùng hot trong thời điểm sắp tới",
+        title: "THƯỢNG ĐÌNH",
+        description: "Công ty Giầy Thượng Đình được thành lập từ năm 1957. Thị trường xuất khẩu chính của công ty là các nước thành viên khối EU, Nhật (chiếm 80% sản lượng giầy xuất khẩu), ngoài ra còn xuất sang các nước khác như Mêxico, Mỹ, Úc và một số nước trong khu vực Đông Nam Á.",
         img: img3,
         path: "/catalog/ao-thun-dinosaur-03",
-        color: "orange"
+        color: "blue"
     }
 ]
 

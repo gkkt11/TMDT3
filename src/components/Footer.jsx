@@ -59,19 +59,19 @@ const Footer = () => {
                         </div>
                         <div className="footer__content">
                             <p>
-                                Liên hệ đặt hàng <strong>0123456789</strong>
+                                Liên hệ đặt hàng <strong>0123123123</strong>
                             </p>
                             <p>
-                                Thắc mắc đơn hàng <strong>0123456789</strong>
+                                Thắc mắc đơn hàng <strong>0123123123</strong>
                             </p>
                             <p>
-                                Góp ý, khiếu nại <strong>0123456789</strong>
+                                Góp ý, khiếu nại <strong>0123123123</strong>
                             </p>
                         </div>
                     </div>
                     <div>
                         <div className="footer__title">
-                            Về Yolo
+                            Về ERROR
                         </div>
                         <div className="footer__content">
                             {
@@ -108,7 +108,7 @@ const Footer = () => {
                             </Link>
                         </p>
                         <p>
-                            Hướng đến mục tiêu mang lại niềm vui ăn mặc mới mỗi ngày cho hàng triệu người tiêu dùng Việt. Hãy cùng Yolo hướng đến một cuộc sống năng động, tích cực hơn.
+                            Bán giày nhưng không bán giày.
                         </p>
                     </div>
                 </Grid>

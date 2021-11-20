@@ -26,33 +26,10 @@ const Home = () => {
             />
             {/* end hero slider */}
 
-            {/* policy section */}
-            <Section>
-                <SectionBody>
-                    <Grid
-                        col={4}
-                        mdCol={2}
-                        smCol={1}
-                        gap={20}
-                    >
-                        {
-                            policy.map((item, index) => <Link key={index} to="/policy">
-                                <PolicyCard
-                                    name={item.name}
-                                    description={item.description}
-                                    icon={item.icon}
-                                />
-                            </Link>)
-                        }
-                    </Grid>
-                </SectionBody>
-            </Section>
-            {/* end policy section */}
-
             {/* best selling section */}
             <Section>
                 <SectionTitle>
-                    top sản phẩm bán chạy trong tuần
+                    TRENDING
                 </SectionTitle>
                 <SectionBody>
                     <Grid
@@ -78,10 +55,20 @@ const Home = () => {
             </Section>
             {/* end best selling section */}
 
+            {/* banner */}
+            <Section>
+                <SectionBody>
+                    <Link to="/catalog">
+                        <img src={banner} alt="" />
+                    </Link>
+                </SectionBody>
+            </Section>
+            {/* end banner */}
+
             {/* new arrival section */}
             <Section>
                 <SectionTitle>
-                    sản phẩm mới
+                    NEW ARRIVAL
                 </SectionTitle>
                 <SectionBody>
                     <Grid
@@ -105,22 +92,12 @@ const Home = () => {
                     </Grid>
                 </SectionBody>
             </Section>
-            {/* end new arrival section */}
-            
-            {/* banner */}
-            <Section>
-                <SectionBody>
-                    <Link to="/catalog">
-                        <img src={banner} alt="" />
-                    </Link>
-                </SectionBody>
-            </Section>
-            {/* end banner */}
+            {/* end new arrival section */}    
 
             {/* popular product section */}
             <Section>
                 <SectionTitle>
-                    phổ biến
+                    POPULAR
                 </SectionTitle>
                 <SectionBody>
                     <Grid
