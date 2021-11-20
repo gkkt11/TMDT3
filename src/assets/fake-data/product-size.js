@@ -1,22 +1,22 @@
 const size = [
     {
-        display: "S",
+        display: "EU 39",
         size: "s"
     },
     {
-        display: "M",
+        display: "EU 40",
         size: "m"
     },
     {
-        display: "L",
+        display: "EU 41",
         size: "l"
     },
     {
-        display: "XL",
+        display: "EU 42",
         size: "xl"
     },
     {
-        display: "XXL",
+        display: "EU 43",
         size: "xxl"
     },
 ]

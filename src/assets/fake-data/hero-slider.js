@@ -18,8 +18,8 @@ const heroSliderData = [
         color: "orange"
     },
     {
-        title: "THƯỢNG ĐÌNH",
-        description: "Công ty Giầy Thượng Đình được thành lập từ năm 1957. Thị trường xuất khẩu chính của công ty là các nước thành viên khối EU, Nhật (chiếm 80% sản lượng giầy xuất khẩu), ngoài ra còn xuất sang các nước khác như Mêxico, Mỹ, Úc và một số nước trong khu vực Đông Nam Á.",
+        title: "ADIDAS ULTRABOOST 21",
+        description: "Prototype after prototype. Innovation after innovation. Testing after testing. Meet us in the hot pursuit of the pinnacle harmonization of weight, cushioning, and responsiveness. Ultraboost 21. Say hello to incredible energy return.",
         img: img3,
         path: "/catalog/ao-thun-dinosaur-03",
         color: "blue"
