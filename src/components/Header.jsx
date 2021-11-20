@@ -13,11 +13,11 @@ const mainNav = [
         path: "/catalog"
     },
     {
-        display: "Phụ kiện",
+        display: "Blog",
         path: "/accessories"
     },
     {
-        display: "Liên hệ",
+        display: "Contact",
         path: "/contact"
     }
 ]

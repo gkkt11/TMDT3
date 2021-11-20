@@ -78,7 +78,7 @@ const ProductView = props => {
                 quantity: quantity
             }
             if (dispatch(addItem(newItem))) {
-                alert('Success')
+                alert('Thêm vào giỏ hàng thành công')
             } else {
                 alert('Fail')
             }
@@ -185,8 +185,8 @@ const ProductView = props => {
                     </div>
                 </div>
                 <div className="product__info__item">
-                    <Button onClick={() => addToCart()}>thêm vào giỏ</Button>
-                    <Button onClick={() => goToCart()}>mua ngay</Button>
+                    <Button onClick={() => addToCart()}>Thêm vào giỏ</Button>
+                    <Button onClick={() => goToCart()}>Mua ngay</Button>
                 </div>
             </div>
             <div className={`product-description mobile ${descriptionExpand ? 'expand' : ''}`}>

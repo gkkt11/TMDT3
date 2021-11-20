@@ -94,6 +94,11 @@ const Home = () => {
             </Section>
             {/* end new arrival section */}    
 
+            { /*container*/ }
+            
+
+            {/* end container*/}
+
             {/* popular product section */}
             <Section>
                 <SectionTitle>
