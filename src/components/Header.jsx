@@ -17,7 +17,7 @@ const mainNav = [
         path: "/accessories"
     },
     {
-        display: "Contact",
+        display: "Liên hệ",
         path: "/contact"
     }
 ]
