@@ -14,7 +14,7 @@ const mainNav = [
     },
     {
         display: "Blog",
-        path: "/accessories"
+        path: "/blog"
     },
     {
         display: "Liên hệ",

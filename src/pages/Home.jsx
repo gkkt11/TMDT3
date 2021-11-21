@@ -14,6 +14,9 @@ import productData from '../assets/fake-data/products'
 
 import banner from '../assets/images/banner.png'
 
+
+
+
 const Home = () => {
     return (
         <Helmet title="Trang chủ">
@@ -94,10 +97,7 @@ const Home = () => {
             </Section>
             {/* end new arrival section */}    
 
-            { /*container*/ }
             
-
-            {/* end container*/}
 
             {/* popular product section */}
             <Section>
