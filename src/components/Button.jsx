@@ -9,6 +9,8 @@ const Button = props => {
 
     const animate = props.animate ? 'btn-animate' : ''
 
+    
+
     return (
         <button
             className={`btn ${bg} ${size} ${animate}`}
