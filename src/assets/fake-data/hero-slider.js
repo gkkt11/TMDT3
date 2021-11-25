@@ -4,7 +4,7 @@ const img3 = require("../images/slider/slide_3.png").default
 
 const heroSliderData = [
     {
-        title: "CONVERSE CHUCK ALL-STAR",
+        title: "CONVERSE RENEW REMIX",
         description: "Inspired by the iconic looks of '90s girl bands, these platform Chucks are sure to turn heads. Premium leather can be as refined or edgy as you'd like, while a double-stacked sole takes you higher.",
         img: img1,
         color: "black",

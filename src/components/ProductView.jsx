@@ -1,5 +1,6 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useRef, useCallback } from 'react'
 import PropTypes from 'prop-types'
+
 
 import { withRouter } from 'react-router'
 
@@ -15,19 +16,7 @@ const ProductView = props => {
 
     const dispatch = useDispatch()
 
-    let product = props.product
-
-    if (product === undefined) product = {
-        title: "",
-        price: '',
-        image01: null,
-        image02: null,
-        categorySlug: "",
-        colors: [],
-        slug: "",
-        size: [],
-        description: ""
-    }
+    let { product } = props
 
     const [previewImg, setPreviewImg] = useState(product.image01)
 
@@ -37,19 +26,23 @@ const ProductView = props => {
 
     const [size, setSize] = useState(undefined)
 
-    const [quantity, setQuantity] = useState(1)
+    const [quantity, setQuantity] = useState(0)
+    console.log(quantity)
+    const updateQuantity = useCallback((amount) => {
+        let _quantity = quantity || 0;
+        _quantity += parseInt(amount, 10);
+        if(_quantity < 0) _quantity = 0;
+        setQuantity(_quantity)
+    }, [quantity])
 
-    const updateQuantity = (type) => {
-        if (type === 'plus') {
-            setQuantity(quantity + 1)
-        } else {
-            setQuantity(quantity - 1 < 1 ? 1 : quantity - 1)
-        }
-    }
+    // const inputQuantity = useCallback((e) => {
+    //     let _quantity = parseInt(e?.target?.value, 10) || 0;
+    //     if(_quantity < 1) _quantity = 0;
+    //     setQuantity(_quantity)
+    // }, [])
 
     useEffect(() => {
         setPreviewImg(product.image01)
-        setQuantity(1)
         setColor(undefined)
         setSize(undefined)
     }, [product])
@@ -78,7 +71,7 @@ const ProductView = props => {
                 quantity: quantity
             }
             if (dispatch(addItem(newItem))) {
-                alert('Success')
+                alert('Thêm vào giỏ hàng thành công')
             } else {
                 alert('Fail')
             }
@@ -173,20 +166,25 @@ const ProductView = props => {
                         Số lượng
                     </div>
                     <div className="product__info__item__quantity">
-                        <div className="product__info__item__quantity__btn" onClick={() => updateQuantity('minus')}>
+                        <div className="product__info__item__quantity__btn" onClick={() => updateQuantity(-1)}>
                             <i className="bx bx-minus"></i>
                         </div>
                         <div className="product__info__item__quantity__input">
                             {quantity}
                         </div>
-                        <div className="product__info__item__quantity__btn" onClick={() => updateQuantity('plus')}>
+                        
+                        {/* <input type="number" onChange={inputQuantity} value={quantity} /> */}
+
+                        <div className="product__info__item__quantity__btn" onClick={() => updateQuantity(1)}>
                             <i className="bx bx-plus"></i>
                         </div>
                     </div>
+                   
                 </div>
+                
                 <div className="product__info__item">
-                    <Button onClick={() => addToCart()}>thêm vào giỏ</Button>
-                    <Button onClick={() => goToCart()}>mua ngay</Button>
+                    <Button onClick={() => addToCart()}>Thêm vào giỏ</Button>
+                    <Button onClick={() => goToCart()}>Mua ngay</Button>
                 </div>
             </div>
             <div className={`product-description mobile ${descriptionExpand ? 'expand' : ''}`}>
@@ -207,7 +205,19 @@ const ProductView = props => {
 }
 
 ProductView.propTypes = {
-    product: PropTypes.object
+    product: PropTypes.objectOf(PropTypes.any)
 }
-
+ProductView.defaultProps = {
+    product: {
+        title: "",
+        price: '',
+        image01: null,
+        image02: null,
+        categorySlug: "",
+        colors: [],
+        slug: "",
+        size: [],
+        description: ""
+    }
+}
 export default withRouter(ProductView)
