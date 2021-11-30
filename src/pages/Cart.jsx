@@ -21,9 +21,18 @@ const Cart = () => {
     const [totalPrice, setTotalPrice] = useState(0)
 
     useEffect(() => {
-        setCartProducts(productData.getCartItemsInfo(cartItems))
-        setTotalPrice(cartItems.reduce((total, item) => total + (Number(item.quantity) * Number(item.price)), 0))
-        setTotalProducts(cartItems.reduce((total, item) => total + Number(item.quantity), 0))
+        if(cartItems){
+            setCartProducts(productData.getCartItemsInfo(cartItems));
+            setTotalPrice(cartItems.reduce((total, item) => {
+                total += (parseInt(item?.quantity, 10) * parseInt(item?.price.replace(/\./g,'').replace(/đ/g,''), 10))
+                return total || 0
+            }, 0))
+            setTotalProducts(cartItems.reduce((total, item) => {
+                total += parseInt(item?.quantity)
+                return total || 0;
+            }, 0))
+        }
+       
     }, [cartItems])
 
     return (

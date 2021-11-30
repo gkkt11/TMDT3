@@ -30,7 +30,7 @@ const ProductViewModal = () => {
                         size="sm"    
                         onClick={() => dispatch(remove())}
                     >
-                        đóng
+                        Đóng
                     </Button>
                 </div>
             </div>

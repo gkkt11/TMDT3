@@ -39,7 +39,7 @@ const product_12_image_02 = require('../images/products/product-12 (2).jpg').def
 const products = [
     {
         title: "Air Jordan XXXVI 'First Light' PF",
-        price: '5.439.000₫',
+        price: '5439000',
         image01: product_01_image_01,
         image02: product_01_image_02,
         categorySlug: "nike",
@@ -50,7 +50,7 @@ const products = [
     },
     {
         title: "Kyrie 8 EP",
-        price: '3.829.000₫',
+        price: '3829000',
         image01: product_02_image_01,
         image02: product_02_image_02,
         categorySlug: "nike",
@@ -61,7 +61,7 @@ const products = [
     },
     {
         title: "Chuck 70 High - Midnight Clover",
-        price: '2.000.000₫',
+        price: '2000000',
         image01: product_03_image_01,
         image02: product_03_image_02,
         categorySlug: "converse",
@@ -72,7 +72,7 @@ const products = [
     },
     {
         title: "Run Star Hike",
-        price: '2.500.000₫',
+        price: '2500000',
         image01: product_04_image_01,
         image02: product_04_image_02,
         categorySlug: "converse",
@@ -83,7 +83,7 @@ const products = [
     },
     {
         title: "ULTRABOOST 21",
-        price: '4.250.000₫',
+        price: '4250000',
         image01: product_05_image_01,
         image02: product_05_image_02,
         categorySlug: "nike",
@@ -94,7 +94,7 @@ const products = [
     },
     {
         title: "ULTRABOOST DNA X LEGO® COLORS",
-        price: '5.000.000₫',
+        price: '5000000',
         image01: product_06_image_01,
         image02: product_06_image_02,
         categorySlug: "adidas",
@@ -105,7 +105,7 @@ const products = [
     },
     {
         title: "ZX 8000 J Lego GZ8214",
-        price: '2.266.000₫',
+        price: '2266000',
         image01: product_07_image_01,
         image02: product_07_image_02,
         categorySlug: "adidas",
@@ -116,7 +116,7 @@ const products = [
     },
     {
         title: "ZX 8000 Lego sneakers",
-        price: '3.400.000₫',
+        price: '3400000',
         image01: product_08_image_01,
         image02: product_08_image_02,
         categorySlug: "adidas",
@@ -127,7 +127,7 @@ const products = [
     },
     {
         title: "Chuck Taylor All Star Basketweave Low Top Sneaker",
-        price: '1.700.000đ',
+        price: '1700000',
         image01: product_09_image_01,
         image02: product_09_image_02,
         categorySlug: "converse",
@@ -138,7 +138,7 @@ const products = [
     },
     {
         title: "Chuck 70",
-        price: '1.800.000₫',
+        price: '1800000',
         image01: product_10_image_01,
         image02: product_10_image_02,
         categorySlug: "converse",
@@ -149,7 +149,7 @@ const products = [
     },
     {
         title: "Nike Air Force 1 Shadow",
-        price: '3,519,000₫',
+        price: '3519000',
         image01: product_11_image_01,
         image02: product_11_image_02,
         categorySlug: "nike",
@@ -160,7 +160,7 @@ const products = [
     },
     {
         title: "Nike Air Force 1 Shadow",
-        price: '3,519,000₫',
+        price: '3519000',
         image01: product_12_image_01,
         image02: product_12_image_02,
         categorySlug: "nike",
@@ -171,18 +171,18 @@ const products = [
     },
     {
         title: "Air Jordan XXXVI 'First Light' PF",
-        price: '5.439.000₫',
+        price: '5439000',
         image01: product_01_image_01,
         image02: product_01_image_02,
         categorySlug: "nike",
-        colors: ["white", "red"],
+        colors: ["white", "black"],
         slug: "air-jordan",
         size: ["39", "40", "41", "42", "43", "44"],
         description: "Since 1985, Jordan Brand has always done things that have never been seen before.Almost 40 years later, Jordan continues to bring new light to the game with international athletes that are redefining the blueprint once again.Beaming with talent, it's about the shine within that makes the new faces of the game radiant on the court.Drawing inspiration from ultraviolet rays, the Air Jordan XXXVI 'First Light' celebrates the future of Jordan—the ones who will brighten the way for the next generation of global superstars all across the world.This PF version uses an extra-durable outsole that's designed for outdoor courts."
     },
     {
         title: "Kyrie 8 EP",
-        price: '3.829.000₫',
+        price: '3829000',
         image01: product_02_image_01,
         image02: product_02_image_02,
         categorySlug: "nike",
@@ -193,7 +193,7 @@ const products = [
     },
     {
         title: "Chuck 70 High - Midnight Clover",
-        price: '2.000.000₫',
+        price: '2000000',
         image01: product_03_image_01,
         image02: product_03_image_02,
         categorySlug: "converse",
@@ -204,7 +204,7 @@ const products = [
     },
     {
         title: "ZX 8000 Lego sneakers",
-        price: '3.400.000₫',
+        price: '3400000',
         image01: product_08_image_01,
         image02: product_08_image_02,
         categorySlug: "adidas",
@@ -215,7 +215,7 @@ const products = [
     },
     {
         title: "Chuck Taylor All Star Basketweave Low Top Sneaker",
-        price: '1.700.000đ',
+        price: '1700000',
         image01: product_09_image_01,
         image02: product_09_image_02,
         categorySlug: "converse",
@@ -226,7 +226,7 @@ const products = [
     },
     {
         title: "Chuck 70",
-        price: '1.800.000₫',
+        price: '1800000',
         image01: product_10_image_01,
         image02: product_10_image_02,
         categorySlug: "converse",
@@ -237,7 +237,6 @@ const products = [
     },
     // 18 products
 ]
-
 const getAllProducts = () => products
 
 const getProducts = (count) => {

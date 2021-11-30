@@ -70,10 +70,13 @@ const ProductView = props => {
                 price: product.price,
                 quantity: quantity
             }
+            if (quantity <= 0) {
+                return alert('Số lượng phải lớn hơn 0')
+            }
             if (dispatch(addItem(newItem))) {
                 alert('Thêm vào giỏ hàng thành công')
             } else {
-                alert('Fail')
+                alert('Thêm vào giỏ hàng thất bại')
             }
         }
     }

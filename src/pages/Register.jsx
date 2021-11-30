@@ -62,7 +62,7 @@ const Button = styled.button`
 
 const Register = () => {
     return (
-        <Link to ="/login">
+        <Link to ="/register">
             <Container>
                 <Wrapper>
                     <Title>CREATE AN ACCOUNT</Title>
