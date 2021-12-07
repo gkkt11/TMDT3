@@ -4,6 +4,7 @@ const items = localStorage.getItem('cartItems') !== null ? JSON.parse(localStora
 
 const initialState = {
     value: items,
+    cardOrder: items,
 }
 
 export const cartItemsSlice = createSlice({
@@ -30,6 +31,7 @@ export const cartItemsSlice = createSlice({
                 }]
             }
             localStorage.setItem('cartItems', JSON.stringify(state.value.sort((a, b) => a.id > b.id ? 1 : (a.id < b.id ? -1 : 0))))
+            return state;
         },
         updateItem: (state, action) => {
             const newItem = action.payload
@@ -46,11 +48,13 @@ export const cartItemsSlice = createSlice({
                 }]
             }
             localStorage.setItem('cartItems', JSON.stringify(state.value.sort((a, b) => a.id > b.id ? 1 : (a.id < b.id ? -1 : 0))))
+            return state;
         },
         removeItem: (state, action) => {
             const item = action.payload
             state.value = state.value.filter(e => e.slug !== item.slug || e.color !== item.color || e.size !== item.size)
             localStorage.setItem('cartItems', JSON.stringify(state.value.sort((a, b) => a.id > b.id ? 1 : (a.id < b.id ? -1 : 0))))
+            return state;
         },
     },
 })

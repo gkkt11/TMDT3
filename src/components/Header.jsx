@@ -1,7 +1,8 @@
 import React, { useRef, useEffect } from 'react'
+import { useSelector } from 'react-redux';
 import { Link, useLocation } from 'react-router-dom'
-// import {IconButton, Badge} from "@material-ui/core";
-// import { ShoppingCart } from '@material-ui/icons';
+import {IconButton, Badge} from "@material-ui/core";
+import { ShoppingCart } from '@material-ui/icons';
 
 import logo from '../assets/images/Logo-2.png';
 
@@ -31,6 +32,7 @@ const Header = ({totalItems}) => {
     const activeNav = mainNav.findIndex(e => e.path === pathname)
 
     const headerRef = useRef(null)
+    const { value } =  useSelector(state => state.cartItems);
 
     
     
@@ -87,14 +89,14 @@ const Header = ({totalItems}) => {
                             <i className="bx bx-search"></i>
                         </div>
                         <div className="header__menu__item header__menu__right__item">
-                            <Link to="/cart">
+                            {/* <Link to="/cart">
                                 <i className="bx bx-shopping-bag"></i>
-                            </Link>
-                            {/* <IconButton component={Link} to="/cart" aria-label="Show cart items" color="inherit">
-                                <Badge badgeContent={totalItems} color="secondary">
+                            </Link> */}
+                            <IconButton component={Link} to="/cart" aria-label="Show cart items" color="inherit">
+                                <Badge badgeContent={value.length} color="secondary">
                                     <ShoppingCart />
                                 </Badge>
-                            </IconButton> */}
+                            </IconButton>
                         </div>
                        
                         <div className="header__menu__item header__menu__right__item">

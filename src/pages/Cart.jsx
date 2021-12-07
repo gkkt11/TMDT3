@@ -10,6 +10,10 @@ import Button from '../components/Button'
 import productData from '../assets/fake-data/products'
 import numberWithCommas from '../utils/numberWithCommas'
 
+
+
+
+
 const Cart = () => {
 
     const cartItems = useSelector((state) => state.cartItems.value)
@@ -21,9 +25,20 @@ const Cart = () => {
     const [totalPrice, setTotalPrice] = useState(0)
 
     useEffect(() => {
-        setCartProducts(productData.getCartItemsInfo(cartItems))
-        setTotalPrice(cartItems.reduce((total, item) => total + (Number(item.quantity) * Number(item.price)), 0))
-        setTotalProducts(cartItems.reduce((total, item) => total + Number(item.quantity), 0))
+        // setCartProducts(productData.getCartItemsInfo(cartItems))
+        // setTotalPrice(cartItems.reduce((total, item) => total + (Number(item.quantity) * Number(item.price)), 0))
+        // setTotalProducts(cartItems.reduce((total, item) => total + Number(item.quantity), 0))
+        if(cartItems){
+            setCartProducts(productData.getCartItemsInfo(cartItems));
+            setTotalPrice(cartItems.reduce((total, item) => {
+                total += (parseInt(item?.quantity, 10) * parseInt(item?.price.replace(/\./g,'').replace(/đ/g,''), 10))
+                return total || 0
+            }, 0))
+            setTotalProducts(cartItems.reduce((total, item) => {
+                total += parseInt(item?.quantity)
+                return total || 0;
+            }, 0))
+        }
     }, [cartItems])
 
     return (
@@ -39,9 +54,18 @@ const Cart = () => {
                         </div>
                     </div>
                     <div className="cart__info__btn">
-                        <Button size="block">
+                        <Link to = "/payment">
+                            <Button size="block">
+                                Đặt hàng
+                            </Button>
+                        </Link>
+                        <br></br><br></br>
+                       
+                        {/* <Button size="block">
                             Đặt hàng
-                        </Button>
+                        </Button> */}
+                       
+                      
                         <Link to="/catalog">
                             <Button size="block">
                                 Tiếp tục mua hàng

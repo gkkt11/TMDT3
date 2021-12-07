@@ -61,6 +61,7 @@ const CartItem = props => {
                         <div className="product__info__item__quantity__input">
                             {quantity}
                         </div>
+                       
                         <div className="product__info__item__quantity__btn" onClick={() => updateQuantity('+')}>
                             <i className="bx bx-plus"></i>
                         </div>

@@ -28,6 +28,13 @@ const ProductView = props => {
 
     const [quantity, setQuantity] = useState(0)
     console.log(quantity)
+    // const updateQuantity = useCallback((amount) => {
+    //     let _quantity = quantity || 0;
+    //     _quantity += parseInt(amount, 10);
+    //     if(_quantity < 0) _quantity = 0;
+    //     setQuantity(_quantity)
+    // }, [quantity])
+
     const updateQuantity = useCallback((amount) => {
         let _quantity = quantity || 0;
         _quantity += parseInt(amount, 10);
@@ -52,7 +59,9 @@ const ProductView = props => {
             alert('Vui lòng chọn màu sắc!')
             return false
         }
-
+        if (quantity <= 0){
+            return alert("Số lượng phải lớn hơn 0")
+        }  
         if (size === undefined) {
             alert('Vui lòng chọn kích cỡ!')
             return false

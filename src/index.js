@@ -10,10 +10,12 @@ import './sass/index.scss'
 
 import Layout from './components/Layout'
 
+
 ReactDOM.render(
   <React.StrictMode>
     <Provider store={store}>
       <Layout />
+     
     </Provider>
   </React.StrictMode>,
   document.getElementById('root')
